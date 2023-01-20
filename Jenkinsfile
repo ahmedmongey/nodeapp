@@ -24,14 +24,13 @@ script {
 docker.withRegistry( '', registryCredential ) {
 dockerImage.push()
 stage('Deploy to kubernetes') {
-            steps {
-                script{
-                    kubernetesDeploy(configs: "deployment.yml" , kubeconfigID: "kubernetes")
-                }
-            }
-    }
-  }
-
+steps {
+script{
+kubernetesDeploy(configs: "deployment.yml" , kubeconfigID: "kubernetes")
+}
+}
+}
+}
 }
 }
 }
