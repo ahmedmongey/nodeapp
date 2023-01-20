@@ -26,7 +26,7 @@ dockerImage.push()
 stage('Deploy to kubernetes') {
 steps {
 script{
-kubernetesDeploy(configs: "deployment.yml" , kubeconfigId: "kubernetes")
+kubernetesDeploy(configs: "service.yml" , kubeconfigId: "kubernetes")
 }
 }
 }
