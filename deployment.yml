@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nodeapp
-        image: nodeapp:latest
+        image: ahmedmongey/myrepo:19
         ports:
         - containerPort: 3000
